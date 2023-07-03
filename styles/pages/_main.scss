@@ -34,20 +34,24 @@ body {
 /*HEADER*/
 .main_container__header {
     @include flex-center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     // height: 100%;
-    background-color: $vert1;
-    border-bottom-right-radius: 4em;
-    box-shadow: 2px 2px 10px $bleu;
+    // background-color: $saumon;
+    // border-bottom-right-radius: 4em;
+    // box-shadow: 2px 2px 10px $bleu;
     
 
 
     .header__logo {
         @include flex-center;
+        z-index: 3;
         background-color: $bleu;
         width: 540px;
         height: 180px;
+        border-top-right-radius: 6px;
         border-bottom-right-radius: 4em;
-        // box-shadow: 2px 2px 20px $vert2;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.59);
         
         img{
             width: 400px;
@@ -56,27 +60,48 @@ body {
 
     .header__coolbox {
         @include flex-center;
+        z-index: 2;
+        height: 180px;
+        margin-left: -4em;
+        border-bottom-right-radius: 4em;
+        border-top-right-radius: 6px;
+        background: $degrade-vert2;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.589);
+
 
         .header__coolbox-text {
             @include flex-center-column;
-            padding: 0 4em;
+            padding: 0 4em 0 8em;
             
             h1 {
                 font-size: 40px;
                 color: $creme;
-                margin-bottom: 0.5em;
+                // margin-bottom: 0.5em;
             }
     
             p {
                 font-size: 24px;
                 color: $creme;
+                margin-bottom:10px;
     
             }
         }
+    }
 
 
 
-        /*MOUVEMENT SOURIS*/
+    /*MOUVEMENT SOURIS et Navigation*/
+    .header__barre-and-nav {
+        @include flex-center;
+        z-index: 1;
+        height: 180px;
+        margin-left: -4em;
+        background: $degrade-saumon;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 4em;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.59);
+
+
         .barre {
             position: relative;
             overflow: hidden;
@@ -84,26 +109,27 @@ body {
             // top: 30px;
             width: 16px;
             height: 70px;
-            background-color: $saumon;
+            margin-left: 7em;
+            background-color: $bleu;
             border: 0;
             border-radius: 10px;
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
         
             .point {
                 position: absolute;
                 width: 8px;
                 height: 8px;
-                background-color: $bleu;
+                background-color: $vert3;
                 border-radius: 50%;
                 animation: slide-bottom-mouse 2s ease-in infinite;
             }
             @include slide-bottom-mouse(70px)
         }
         
-    }
+    
 
-    nav {
+        nav {
         @include flex-center-column;
         // top: 20px;
         // left: 20px;
@@ -112,19 +138,230 @@ body {
         // height: 100px;
         padding: 0 3em;
 
-        a {
-            border-radius: 50%;
-            filter: invert(12%) sepia(12%) saturate(3230%) hue-rotate(175deg) brightness(97%) contrast(108%);            
-
-            img {
+            a {
                 border-radius: 50%;
-                width: 50px;
-            }
-        }
+                filter: invert(12%) sepia(12%) saturate(3230%) hue-rotate(175deg) brightness(97%) contrast(108%);            
 
-        a:hover {
-            filter: invert(100%) sepia(27%) saturate(7495%) hue-rotate(303deg) brightness(100%) contrast(93%);  
+                img {
+                    border-radius: 50%;
+                    width: 50px;
+                }
+            }
+
+            a:hover {
+                filter: invert(36%) sepia(94%) saturate(1020%) hue-rotate(120deg) brightness(93%) contrast(103%); 
+            }
         }
     }
 }
 
+
+/*§§§§§§§§§§§§§§§*/
+/*TOP SECTION*/
+.main_container__top-section {
+    @include flex-center;
+    position: relative;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+    @include opac;
+
+    .top-section__auditer-maitriser {
+        @include flex-center-column;
+        width: 600px;
+        border-radius: 3em;
+        box-shadow: 3px 3px 10px $bleu;
+        margin: 30px;
+
+    
+        h2 {
+            @include flex-center;
+            background-color: $bleu;
+            color: $creme;
+            font-size: 26px;
+            border-radius: 20px;
+            padding: 0 3em;
+            height: 44px;
+            margin-top: -22px;
+        }
+
+        h3 {
+            padding: 1em 1em;
+            text-align: center;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        #h3-1 {
+            color: $bleu
+        }
+
+        #h3-2 {
+            color: $creme
+        }
+
+
+        /*Explications*/
+        .explanations {
+            @include flex-center-column;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            background-color: $creme;
+            list-style-type: none;
+            border-radius: 3em;
+            padding-top: 40px;
+            padding: 40px 50px;
+
+            li {
+                @include flex-center;
+                // justify-content: space-between;
+                margin-bottom: 20px;
+
+                .support-img {
+                    @include flex-center;
+                    align-self: flex-start;
+                    background-color: $saumon;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+                    img {
+                    width: 20px;
+                    filter: invert(90%) sepia(12%) saturate(591%) hue-rotate(330deg) brightness(110%) contrast(104%);
+                    }
+                }
+
+
+                p{
+                    max-width: 440px;
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $bleu;
+                }
+            }
+
+            #li1 {
+                animation: opac 2s;
+            }
+            #li2 {
+                animation: opac 3s;
+            }
+            #li3 {
+                animation: opac 4s;
+            }
+            #li4 {
+                align-self: center;
+                width: 85%;
+                animation: opac 5s;
+                margin-top: 50px;
+                margin-bottom: 30px;
+
+                .support-image-calendar {
+                    @include flex-center;
+                    margin-right: 20px;
+                    background-color: $saumon;
+                    // border: solid 3px $bleu;
+                    border-radius: 50%;
+                    padding: 12px;
+
+                    img {
+                        width: 30px;
+                        filter: invert(94%) sepia(90%) saturate(146%) hue-rotate(5deg) brightness(104%) contrast(107%);
+                    }
+                }
+            }
+            #li5 {
+                animation: opac 6s;
+                .support-img {
+                    background-color: $vert3;
+                }
+            }
+            #li6 {
+                animation: opac 7s;                
+                .support-img {
+                    background-color: $vert3;
+                }
+            }
+            #li7 {
+                animation: opac 8s;                
+                .support-img {
+                    background-color: $vert3;
+                }
+            }
+            #li8 {
+                animation: opac 9s;                
+                .support-img {
+                    background-color: $vert3;
+                }
+            }
+            #li9 {
+                align-self: center;
+                width: 85%;
+                animation: opac 10s;
+                margin-top: 20px;
+                margin-bottom: 60px;
+
+                .support-image-calendar {
+                    @include flex-center;
+                    margin-right: 20px;
+
+                    img {
+                        width: 60px;
+                        filter: invert(73%) sepia(10%) saturate(1644%) hue-rotate(96deg) brightness(87%) contrast(86%);
+                    }                    
+                }
+
+            }
+        }
+
+        .cee {
+            @include flex-center-column;
+            position: absolute;
+            bottom: 0;
+            h4 {
+                animation: opac 11s;
+                position: absolute;
+                @include flex-center;
+                background-color: $bleu;
+                color: $creme;
+                font-size: 14px;
+                border-radius: 20px;
+                padding: 0 2em;
+                height: 22px;
+                margin-top: -14px;
+                margin-left:50px;
+                text-transform:capitalize;
+            }
+
+            img {
+                width: 200px;
+
+            }
+        }
+    }
+
+    #ts1 {
+        background-color: $saumon;
+        border: solid 4px $saumon;
+    }
+
+    #ts2 {
+        background-color: $vert3;
+        border: solid 4px $vert3;
+    }
+
+}
+
+
+
+/*§§§§§§§§§§§§§§§*/
+/*USE CASE AIRBUS*/
+.main_container__use-case {
+
+
+    
+}

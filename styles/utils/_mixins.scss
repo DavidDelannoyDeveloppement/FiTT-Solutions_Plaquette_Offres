@@ -33,6 +33,12 @@
         50% {transform: translateY(3000px);}
         to {transform: translateY(0);}
     }
+
+    @keyframes slide-z {
+        from {transform: translatez(3000px);}
+        50% {transform: translatez(3000px);}
+        to {transform: translatez(0);}
+    }
 }
 
 
