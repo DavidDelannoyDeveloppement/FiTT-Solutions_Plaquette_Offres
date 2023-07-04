@@ -20,8 +20,8 @@ body {
 
 /*Main Container*/
 .main_container {
-    @include flex-center;
-    align-items: flex-start;
+    @include flex-center-column;
+    // align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
@@ -35,6 +35,7 @@ body {
 .main_container__header {
     @include flex-center;
     justify-content: flex-start;
+    align-self: flex-start;
     flex-wrap: wrap;
     // height: 100%;
     // background-color: $saumon;
@@ -162,17 +163,19 @@ body {
     @include flex-center;
     position: relative;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     width: 100%;
     height: 100%;
     margin-top: 70px;
+    margin-bottom: 52px;
     @include opac;
 
     .top-section__auditer-maitriser {
+        position: relative;
         @include flex-center-column;
         width: 600px;
         border-radius: 3em;
-        box-shadow: 3px 3px 10px $bleu;
+        box-shadow: 5px 5px 12px $bleu;
         margin: 30px;
 
     
@@ -225,7 +228,7 @@ body {
                     align-self: flex-start;
                     background-color: $saumon;
                     border-radius: 50%;
-                    width: 30px;
+                    min-width: 30px;
                     height: 30px;
                     margin-right: 20px;
                     img {
@@ -258,7 +261,7 @@ body {
                 width: 85%;
                 animation: opac 5s;
                 margin-top: 50px;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
 
                 .support-image-calendar {
                     @include flex-center;
@@ -321,7 +324,9 @@ body {
         .cee {
             @include flex-center-column;
             position: absolute;
-            bottom: 0;
+            bottom: -10px;
+            right: -30px;
+            rotate: 15deg;
             h4 {
                 animation: opac 11s;
                 position: absolute;
@@ -342,6 +347,17 @@ body {
 
             }
         }
+
+        .lien {
+            @include flex-center;
+            position: absolute;
+            z-index: 10;
+            bottom: -103px;
+
+            img {
+                width: 100%
+            }
+        }
     }
 
     #ts1 {
@@ -358,10 +374,216 @@ body {
 
 
 
+
+
 /*§§§§§§§§§§§§§§§*/
-/*USE CASE AIRBUS*/
+/*USE CASE*/
 .main_container__use-case {
+    @include flex-center-column;
+    border: solid 3px $bleu;
+    width: 90%;
+    border-radius: 3em;
+    margin-bottom: 50px;
+    background-color: $bleu;
+
+    h1 {
+        font-size: 36px;
+        color: $creme;
+        margin: 0.5em 0;
+    }
 
 
-    
+    .part__use-case {
+        @include flex-center-column;
+        width: 100%;
+        border-radius: 3em;
+        background-color: $creme;
+
+
+        img {
+            width: 160px;
+        }
+
+        h4 {
+            width: 90%;
+            font-size: 20px;
+            font-weight: 900;
+            color: $bleu;
+            text-align: center;
+        }
+
+        ul {
+            width: 90%;
+            margin: 1em 0;
+
+
+            li {
+                @include flex-center;
+                // justify-content: space-between;
+                margin-bottom: 20px;
+
+                .support-img {
+                    @include flex-center;
+                    align-self: flex-start;
+                    background-color: $saumon;
+                    border-radius: 50%;
+                    min-width: 30px;
+                    height: 30px;
+                    margin-right: 20px;
+
+                    img {
+                    width: 20px;
+                    filter: invert(90%) sepia(12%) saturate(591%) hue-rotate(330deg) brightness(110%) contrast(104%);
+                    }
+                }
+
+
+                p{
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $bleu;
+                }
+            }
+        }
+
+        .image-and-descriptions_use-case {
+            @include flex-center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 90%;
+            margin-bottom: 30px;
+
+            .support-image-froid {
+                width: 45%;
+                min-width: 450px;
+                margin-right: 10px;
+            
+                img {
+                    width: 100%;
+                }
+            }
+
+            .descriptions {
+                @include flex-center-column;
+                align-items: flex-start;
+                width: 45%;
+                min-width: 400px;
+                // margin-left: 26px;
+                // margin-top: 1em;
+                margin: 1em 14px 0 26px;
+
+                .resultats {
+                    @include flex-center-column;
+                    align-items: flex-start;
+
+                    h5 {
+                    font-size: 18px;
+                    color: $creme;
+                    background-color: $saumon;
+                    padding: 0.1em 1.5em;
+                    border-radius: 1em;
+                    }
+
+                    ul {
+                        width: 100%;
+                        margin: 1em 0;
+            
+                        li {
+                            @include flex-center;
+                            justify-content: flex-start;
+                            // justify-content: space-between;
+                            margin-bottom: 20px;
+
+            
+                            .support-img {
+                                @include flex-center;
+                                align-self: flex-start;
+                                background-color: $bleu;
+                                border-radius: 50%;
+                                min-width: 30px;
+                                height: 30px;
+                                margin-right: 20px;
+
+                                img {
+                                width: 20px;
+                                filter: invert(90%) sepia(12%) saturate(591%) hue-rotate(330deg) brightness(110%) contrast(104%);
+                                }
+                            }
+            
+            
+                            p{
+                                font-weight: 300;
+                                font-size: 20px;
+                                line-height: 24px;
+                                color: $bleu;
+                            }
+                        }
+                    }                
+                }
+
+
+                .gain {
+                    @include flex-center-column;
+                    align-items: flex-start;
+                    width: 100%;
+                    min-width: 450px;
+                    background-color: $saumon;
+                    border-radius: 2em;
+                    margin-top: 20px;
+                    margin-left: -30px;
+
+
+                    h5 {
+                        margin-top: -20px;
+                        margin-bottom: 20px;
+                        margin-left: 30px;
+                        font-size: 18px;
+                        color: $creme;
+                        background-color: $bleu;
+                        padding: 0.1em 2em;
+                        border-radius: 1em;
+                    }
+
+                    ul {
+                        width: 100%;
+                        margin: 0 2em;
+            
+                        li {
+                            @include flex-center;
+                            justify-content: flex-start;
+                            // justify-content: space-between;
+                            margin-bottom: 20px;
+
+            
+                            .support-img {
+                                @include flex-center;
+                                align-self: flex-start;
+                                background-color: $bleu;
+                                border-radius: 50%;
+                                min-width: 30px;
+                                height: 30px;
+                                margin-right: 20px;
+
+                                img {
+                                width: 20px;
+                                filter: invert(90%) sepia(12%) saturate(591%) hue-rotate(330deg) brightness(110%) contrast(104%);
+                                }
+                            }
+            
+            
+                            p {
+                                display: flex;
+                                flex-wrap: wrap;
+                                font-weight: 300;
+                                font-size: 20px;
+                                line-height: 24px;
+                                color: $bleu;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
