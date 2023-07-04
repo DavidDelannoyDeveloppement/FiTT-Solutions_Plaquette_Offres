@@ -492,6 +492,8 @@ body {
 }
 .main_container__use-case .part__use-case .image-and-descriptions_use-case .support-image-froid img {
   width: 100%;
+  border-radius: 1em;
+  box-shadow: 3px 3px 10px #031837;
 }
 .main_container__use-case .part__use-case .image-and-descriptions_use-case .descriptions {
   display: flex;
@@ -514,6 +516,7 @@ body {
   background-color: #f6ab78;
   padding: 0.1em 1.5em;
   border-radius: 1em;
+  box-shadow: 2px 2px 5px #031837;
 }
 .main_container__use-case .part__use-case .image-and-descriptions_use-case .descriptions .resultats ul {
   width: 100%;
@@ -555,6 +558,7 @@ body {
   width: 100%;
   min-width: 450px;
   background-color: #f6ab78;
+  box-shadow: 2px 2px 5px #031837;
   border-radius: 2em;
   margin-top: 20px;
   margin-left: -30px;

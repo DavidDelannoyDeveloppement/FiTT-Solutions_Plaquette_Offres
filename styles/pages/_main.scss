@@ -461,6 +461,8 @@ body {
             
                 img {
                     width: 100%;
+                    border-radius: 1em;
+                    box-shadow: 3px 3px 10px $bleu;
                 }
             }
 
@@ -483,6 +485,7 @@ body {
                     background-color: $saumon;
                     padding: 0.1em 1.5em;
                     border-radius: 1em;
+                    box-shadow: 2px 2px 5px $bleu;
                     }
 
                     ul {
@@ -504,6 +507,7 @@ body {
                                 min-width: 30px;
                                 height: 30px;
                                 margin-right: 20px;
+
 
                                 img {
                                 width: 20px;
@@ -529,6 +533,7 @@ body {
                     width: 100%;
                     min-width: 450px;
                     background-color: $saumon;
+                    box-shadow: 2px 2px 5px $bleu;
                     border-radius: 2em;
                     margin-top: 20px;
                     margin-left: -30px;
