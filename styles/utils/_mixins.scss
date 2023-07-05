@@ -125,8 +125,6 @@
     @keyframes opac-douce-2 {
         0% {opacity:0;}
 
-
-
         100% {opacity: 1;}
     }
 }
@@ -336,3 +334,122 @@
 
 
 
+/*Animations au scroll*/
+/*Animation opac-douce-scroll*/
+@mixin scroll-opac($duree) {
+    .reveal {
+        position: relative;
+        opacity: 0;
+    }
+    
+    .reveal.active {
+    opacity: 1;
+    }
+    
+
+    .active.scroll-opac {
+    animation: opac ($duree) ease-in;
+    }
+    
+    
+    @keyframes opac {
+        0% {opacity:0;}
+
+        100% {opacity: 1;}
+    }
+}
+
+
+/*Animations au scroll pour div gain*/
+/*Animation fade-right-gain*/
+@mixin fade-right-gain($duree) {
+    .reveal {
+        position: relative;
+        opacity: 0;
+    }
+    
+    .reveal.active {
+    opacity: 1;
+    }
+    
+
+    .active.fade-right-gain {
+    animation: fade-right-gain ($duree) ease-in;
+    }
+    
+    
+    @keyframes fade-right-gain {
+    // 0% {
+    //     transform: translateX(-100%);
+    //     opacity: 1;
+    // }
+    // 40% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 48% {
+    //     transform: translateX(-30%);
+    //     opacity: 1;
+    // }
+    // 55% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 62% {
+    //     transform: translateX(-20%);
+    //     opacity: 1;
+    // }
+    // 68% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 74% {
+    //     transform: translateX(-10%);
+    //     opacity: 1;
+    // }
+    // 79% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 84% {
+    //     transform: translateX(-7%);
+    //     opacity: 1;
+    // }
+    // 88% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 92% {
+    //     transform: translateX(-4%);
+    //     opacity: 1;
+    // }
+    // 95% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+    // 98% {
+    //     transform: translateX(-2%);
+    //     opacity: 1;
+    // }
+    // 100% {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
+
+
+        0% {
+            transform: translateX(-300%);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateX(-300%);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
