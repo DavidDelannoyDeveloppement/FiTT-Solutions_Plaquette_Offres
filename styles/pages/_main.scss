@@ -812,8 +812,49 @@ body {
                 width: 50px;
                 filter: invert(7%) sepia(31%) saturate(4336%) hue-rotate(203deg) brightness(95%) contrast(101%);
             }
-
-
         }        
     }
+}
+
+
+
+
+
+/****************/
+/****************/
+/*§§§§§§§§§§§§§§§*/
+/*FOOTER*/
+.main_container__footer-2 {
+    @include flex-center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $bleu;
+    padding: 2em;
+    margin-top: 30px;
+
+
+
+    .support-image-text-footer-2 {
+        @include flex-center-column;
+        // width: 100%;
+        border-radius: 1em;
+        padding: 0.8em;
+
+        
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            color: $creme;
+            text-align: center;
+            padding: 0.5em
+        }
+
+
+        img {
+            width: 50px;
+            filter: invert(47%) sepia(69%) saturate(5787%) hue-rotate(134deg) brightness(97%) contrast(101%);
+        }
+    }        
+
 }
