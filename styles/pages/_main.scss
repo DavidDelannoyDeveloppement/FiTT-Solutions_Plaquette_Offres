@@ -33,8 +33,9 @@ body {
 /*§§§§§§§§§§§§§§§*/
 /*HEADER*/
 .main_container__header {
-    @include flex-center;
+    display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
     align-self: flex-start;
     flex-wrap: wrap;
     // height: 100%;
@@ -51,8 +52,9 @@ body {
         width: 540px;
         height: 180px;
         border-top-right-radius: 6px;
-        border-bottom-right-radius: 4em;
+        border-bottom-right-radius: 3em;
         box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.59);
+
         
         img{
             width: 400px;
@@ -62,9 +64,10 @@ body {
     .header__coolbox {
         @include flex-center;
         z-index: 2;
-        height: 180px;
+        // height: 180px;
+        height: 140px;
         margin-left: -4em;
-        border-bottom-right-radius: 4em;
+        border-bottom-right-radius: 3em;
         border-top-right-radius: 6px;
         background: $degrade-vert2;
         box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.589);
@@ -97,15 +100,17 @@ body {
     .header__barre-and-nav {
         @include flex-center;
         z-index: 1;
-        height: 180px;
+        height: 100px;
         margin-left: -4em;
         background: $degrade-saumon;
         border-top-right-radius: 6px;
-        border-bottom-right-radius: 4em;
+        border-bottom-right-radius: 3em;
         box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.59);
 
 
         .barre {
+            display: flex;
+            justify-content: center;
             position: relative;
             overflow: hidden;
             // left: 70px;
@@ -530,6 +535,7 @@ body {
 
 
         img {
+            margin: 30px 0;
             width: 160px;
         }
 
@@ -545,6 +551,11 @@ body {
             @include flex-center;
             justify-content: space-between;
             width: 400px;
+
+            img {
+                margin: 0;
+            }
+
             p {
                 font-size: 30px;
                 font-weight: 900;
@@ -759,5 +770,50 @@ body {
                 }
             }
         }
+    }
+}
+
+
+
+/*§§§§§§§§§§§§§§§*/
+/*FOOTER*/
+.main_container__footer {
+    @include flex-center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $bleu;
+    padding: 2em;
+    margin-top: 30px;
+
+    .cadre__footer {
+        background-color: $vert1;            
+        border-radius: 1em;
+        border: solid 3px $vert1;
+        margin: 15px;
+        
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            color: $bleu;
+            text-align: center;
+            padding: 0.5em
+        }
+
+        .support-image-text-footer {
+            @include flex-center-column;
+            background-color: $creme;
+            // width: 100%;
+            border-radius: 1em;
+            padding: 0.8em;
+
+
+            img {
+                width: 50px;
+                filter: invert(7%) sepia(31%) saturate(4336%) hue-rotate(203deg) brightness(95%) contrast(101%);
+            }
+
+
+        }        
     }
 }
