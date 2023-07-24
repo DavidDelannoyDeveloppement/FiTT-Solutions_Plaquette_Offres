@@ -338,19 +338,17 @@
 /*Animation opac-douce-scroll*/
 @mixin scroll-opac($duree) {
     .reveal {
-        position: relative;
+        // position: relative;
         opacity: 0;
     }
-    
+
     .reveal.active {
     opacity: 1;
     }
-    
 
     .active.scroll-opac {
     animation: opac ($duree) ease-in;
     }
-    
     
     @keyframes opac {
         0% {opacity:0;}
@@ -379,64 +377,6 @@
     
     
     @keyframes fade-right-gain {
-    // 0% {
-    //     transform: translateX(-100%);
-    //     opacity: 1;
-    // }
-    // 40% {
-    //     transform: translateX(0);
-    //     opacity: 1;
-    // }
-    // 48% {
-    //     transform: translateX(-30%);
-    //     opacity: 1;
-    // }
-    // 55% {
-    //     transform: translateX(0);
-    //     opacity: 1;
-    // }
-    // 62% {
-    //     transform: translateX(-20%);
-    //     opacity: 1;
-    // }
-    // 68% {
-    //     transform: translateX(0);
-    //     opacity: 1;
-    // }
-    // 74% {
-    //     transform: translateX(-10%);
-    //     opacity: 1;
-    // }
-    // 79% {
-    //     transform: translateX(0);
-    //     opacity: 1;
-    // }
-    // 84% {
-    //     transform: translateX(-7%);
-    //     opacity: 1;
-    // }
-    // 88% {
-    //     transform: translateX(0);
-    //     opacity: 1;
-    // }
-    // 92% {
-    //     transform: translateX(-4%);
-    //     opacity: 1;
-    // }
-    // 95% {
-    //     transform: translateX(0);
-    //     opacity: 1;
-    // }
-    // 98% {
-    //     transform: translateX(-2%);
-    //     opacity: 1;
-    // }
-    // 100% {
-    //     transform: translateX(0);
-    //     opacity: 1;
-    // }
-
-
         0% {
             transform: translateX(-300%);
             opacity: 1;
@@ -450,6 +390,74 @@
         100% {
             transform: translateX(0);
             opacity: 1;
+        }
+    }
+}
+
+
+/*Animations au scroll pour div gain 2*/
+/*Animation opac-douce-scroll*/
+@mixin scroll-opac_2($duree) {
+    .reveal_2 {
+        // position: relative;
+        opacity: 0;
+    }
+
+    .reveal_2.active_2 {
+    opacity: 1;
+    }
+
+    .active_2.scroll-opac_2 {
+    animation: opac_2 ($duree) ease-in;
+    }
+    
+    @keyframes opac_2 {
+        0% {opacity:0;}
+
+        100% {opacity: 1;}
+    }
+}
+
+
+/*Animation logo*/
+/*Animation accueil*/
+@mixin anim-clic($duree) {
+ 
+    .click {
+    animation: anim-clic $duree ease-in-out infinite;
+    }
+    
+    @keyframes anim-clic {
+    // 0% {
+    //     rotate:(0deg);
+    // }
+
+        20% {
+
+        }
+
+        30% {
+            filter: invert(39%) sepia(96%) saturate(4046%) hue-rotate(137deg) brightness(99%) contrast(103%);
+        }
+
+        40%{
+
+        }
+
+        60% {
+            filter: invert(10%) sepia(39%) saturate(1272%) hue-rotate(177deg) brightness(100%) contrast(106%);
+        }
+
+        80% {
+
+        }
+
+        90%{
+            filter: invert(47%) sepia(47%) saturate(633%) hue-rotate(67deg) brightness(107%) contrast(99%);
+        } 
+
+        100% {
+
         }
     }
 }
